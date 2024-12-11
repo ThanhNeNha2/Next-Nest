@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div>
       xin chào nha
-      <Button>vo chi thanh </Button>
+      <>vo chi thanh </>
     </div>
   );
 }

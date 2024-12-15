@@ -18,7 +18,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
         let res = await sendRequest<IBackendRes<ILogin>>({
           method: "POST",
-          url: "http://localhost:8080/api/v1/auth/login",
+          url: `${process.env.NEXT_PUBLIC_BACKEND_PORT}/api/v1/auth/login`,
           body: {
             username: credentials.username,
             password: credentials.password,

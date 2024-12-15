@@ -15,8 +15,9 @@ const Login = () => {
         message: "Error login",
         description: res?.error,
       });
+
       if (+res?.code === 2) {
-        router.push("/verify");
+        router.push(`/verify`);
       }
     } else {
       router.push("/dashboard");

@@ -16,8 +16,7 @@ declare global {
     error?: string | string[];
     message: string;
     statusCode: number | string;
-    user: T;
-    access_token: string;
+    data?: T;
   }
 
   interface IModelPaginate<T> {
@@ -30,8 +29,11 @@ declare global {
     result: T[];
   }
   interface ILogin {
-    _id: string;
-    name: string;
-    email: string;
+    user: {
+      email: string;
+      _id: string;
+      name: string;
+    };
+    access_token: string;
   }
 }
